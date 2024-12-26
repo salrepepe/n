@@ -1,0 +1,7 @@
+AddDefaultCharset utf-8
+DirectoryIndex index.html
+RewriteEngine On
+Options +FollowSymlinks
+RewriteCond   %{REQUEST_FILENAME}       !-d
+RewriteCond   %{REQUEST_FILENAME}       !-f
+RewriteRule   ^(.*) index.html?%{QUERY_STRING}
